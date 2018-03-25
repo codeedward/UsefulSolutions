@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{12E7CC2D-8661-4731-BA1B-F729C444525A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3DDBF0C5-6D98-4303-9F37-1C0FF6F57D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomValidationAttribute", "Projects\Common\CustomValidationAttribute\CustomValidationAttribute.csproj", "{C0F5F0AF-2A3B-4B4D-ABBD-3EAE8612E837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonSnippets", "Snippets\CommonSnippets\CommonSnippets.csproj", "{95033296-4C0E-40A2-AE71-E7232DE064AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{2FF2ECA1-4ECF-4DFF-92EF-3766EA6FAC69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0F5F0AF-2A3B-4B4D-ABBD-3EAE8612E837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F5F0AF-2A3B-4B4D-ABBD-3EAE8612E837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F5F0AF-2A3B-4B4D-ABBD-3EAE8612E837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F5F0AF-2A3B-4B4D-ABBD-3EAE8612E837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95033296-4C0E-40A2-AE71-E7232DE064AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95033296-4C0E-40A2-AE71-E7232DE064AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95033296-4C0E-40A2-AE71-E7232DE064AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95033296-4C0E-40A2-AE71-E7232DE064AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DDBF0C5-6D98-4303-9F37-1C0FF6F57D11} = {12E7CC2D-8661-4731-BA1B-F729C444525A}
+		{C0F5F0AF-2A3B-4B4D-ABBD-3EAE8612E837} = {3DDBF0C5-6D98-4303-9F37-1C0FF6F57D11}
+		{95033296-4C0E-40A2-AE71-E7232DE064AD} = {2FF2ECA1-4ECF-4DFF-92EF-3766EA6FAC69}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A75F9BF-EABE-43AE-BEB3-35F73289552C}
+	EndGlobalSection
+EndGlobal
