@@ -1,0 +1,12 @@
+﻿How to set up default mvc validation
+------------------------------------------------------------------------------------------
+1. Add model with attributes.
+2. Use EditorFor in your view.
+3. Add validation node for every field to display proper information.
+4. Make sure you use jquery, all jquery.validation and jquery.validation.unobtrusive.
+
+
+
+How to use default validation with custom validation attributes
+------------------------------------------------------------------------------------------
+
