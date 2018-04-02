@@ -1,4 +1,10 @@
-﻿How to set up default mvc validation
+﻿Urls:
+------------------------------------------------------------------------------------------
+https://weblogs.asp.net/srkirkland/adding-client-validation-to-dataannotations-datatype-attribute
+
+
+
+How to set up default mvc validation
 ------------------------------------------------------------------------------------------
 1. Add model with attributes.
 2. Use EditorFor in your view.
@@ -9,4 +15,9 @@
 
 How to use default validation with custom validation attributes
 ------------------------------------------------------------------------------------------
+a) for Required attribute (MyRequired class)
+- create MyRequired class and inherit from Required class
+- to make it works with client side validation register in Global.asax.cs
+DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(MyRequiredAttribute), typeof(RequiredAttributeAdapter));
+
 

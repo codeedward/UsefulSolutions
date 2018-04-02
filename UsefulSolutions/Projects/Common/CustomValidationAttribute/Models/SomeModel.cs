@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using CustomValidationAttribute.Attributes;
 
 namespace CustomValidationAttribute.Models
 {
@@ -16,7 +17,10 @@ namespace CustomValidationAttribute.Models
         [DataType(DataType.Date)]
         public string DateTime { get; set; }
 
-        [DataType(DataType.EmailAddress)]
-        public string EmailAddress { get; set; }
+        [MyRequired]
+        public string MyRequiredField { get; set; }
+
+        //[DataType(DataType.Date)]
+        public string MyDateTime { get; set; }
     }
 }

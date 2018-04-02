@@ -19,7 +19,14 @@
     <br />
     @Html.EditorFor(model => model.DateTime)
     @Html.ValidationMessageFor(model => model.DateTime, null, new { @class = "text-danger" })
+    <br /><br />
 
+    <br />
+    @Html.EditorFor(model => model.MyRequiredField)
+    @Html.ValidationMessageFor(model => model.MyRequiredField, null, new { @class = "text-danger" })
+    @*<br />
+    @Html.EditorFor(model => model.DateTime)
+    @Html.ValidationMessageFor(model => model.DateTime, null, new { @class = "text-danger" })*@
     <p>
         <input type="submit" value="Create" />
     </p>
