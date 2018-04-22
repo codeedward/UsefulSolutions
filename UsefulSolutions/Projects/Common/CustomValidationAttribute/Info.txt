@@ -19,5 +19,7 @@ a) for Required attribute (MyRequired class)
 - create MyRequired class and inherit from Required class
 - to make it works with client side validation register in Global.asax.cs
 DataAnnotationsModelValidatorProvider.RegisterAdapter(typeof(MyRequiredAttribute), typeof(RequiredAttributeAdapter));
-
-
+b) for DataType attribute (MyDataAttribute class)
+- create MyDataAttribute class and inherit from DataTypeAttribute
+- remember to add DateTime type to your properties with dates instead of string
+- it works by default, because DataType works by default

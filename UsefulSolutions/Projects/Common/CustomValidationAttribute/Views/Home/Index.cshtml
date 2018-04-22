@@ -10,23 +10,35 @@
     @Html.ValidationSummary(true)
 <fieldset>
     <legend>Fields</legend>
-
+    @Html.LabelFor(model => model.NoValidationField)
     @Html.EditorFor(model => model.NoValidationField)
     @Html.ValidationMessageFor(model => model.NoValidationField, null, new { @class = "text-danger" })
     <br />
+    @Html.LabelFor(model => model.RequiredField)
     @Html.EditorFor(model => model.RequiredField)
     @Html.ValidationMessageFor(model => model.RequiredField, null, new { @class = "text-danger" })
     <br />
+    @Html.LabelFor(model => model.Email)
+    @Html.EditorFor(model => model.Email)
+    @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text-danger" })
+    <br /><br />
+    @Html.LabelFor(model => model.DateTime)
     @Html.EditorFor(model => model.DateTime)
     @Html.ValidationMessageFor(model => model.DateTime, null, new { @class = "text-danger" })
     <br /><br />
 
     <br />
+    @Html.LabelFor(model => model.MyRequiredField)
     @Html.EditorFor(model => model.MyRequiredField)
     @Html.ValidationMessageFor(model => model.MyRequiredField, null, new { @class = "text-danger" })
-    @*<br />
-    @Html.EditorFor(model => model.DateTime)
-    @Html.ValidationMessageFor(model => model.DateTime, null, new { @class = "text-danger" })*@
+    <br />
+    @Html.LabelFor(model => model.MyEmail)
+    @Html.EditorFor(model => model.MyEmail)
+    @Html.ValidationMessageFor(model => model.MyEmail, null, new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(model => model.MyDateTime)
+    @Html.EditorFor(model => model.MyDateTime)
+    @Html.ValidationMessageFor(model => model.MyDateTime, null, new { @class = "text-danger" })
     <p>
         <input type="submit" value="Create" />
     </p>
