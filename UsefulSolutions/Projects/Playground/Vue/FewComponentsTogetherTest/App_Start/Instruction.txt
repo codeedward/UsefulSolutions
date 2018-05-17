@@ -1,0 +1,16 @@
+Application purpose
+-----------------------
+Play with Vue components. Get up to spead with vue. 
+Use only naive loading everythin into one page. No extra libraries. Clear vue.js.
+-----------------------
+
+
+Login view with hardcoded login/password (no security after that)
+Main view 
+-> List of shopping items [description, quantity, price]
+-> overal price on the bottom
+-> Add new
+-> Edit
+-> Details
+-> Delete
+-> Save list somewhere in static variable to imitate database

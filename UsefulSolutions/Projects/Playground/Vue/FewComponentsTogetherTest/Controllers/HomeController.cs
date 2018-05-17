@@ -26,5 +26,10 @@ namespace FewComponentsTogetherTest.Controllers
 
             return View();
         }
+
+        public ActionResult VueTest()
+        {
+            return View();
+        }
     }
 }
