@@ -1,6 +1,7 @@
 ﻿var app = new Vue({
     el: '#app',
     data: {
-        message: 'Test123s'
+        viewStep: 1,
+        message: 'This is my test site'
     }
 });

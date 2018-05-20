@@ -1,0 +1,12 @@
+﻿<script type="text/x-template" id="login-componennt">
+    <div>
+        <h3>Login</h3>
+        <div>
+            Name: <input v-model="login" v-bind:placeholder="loginPlaceholder" />
+        </div>
+        <div>
+            Password: <input v-model="password" v-bind:placeholder="passwordPlaceholder" />
+        </div>
+        <input type="button" v-on:click="logIn" value="Log in" />
+    </div>
+</script>
