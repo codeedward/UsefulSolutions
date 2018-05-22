@@ -4,8 +4,8 @@
         <input type="button" v-on:click="addProduct" value="Add product" />
         <div v-for="item in shoppingList">
             Name: {{item.description}}, Quantity: {{item.quantity}}, Price {{item.price}}
-            @*<input type="button" v-on:click="editProduct" value="Edit" />
-            <input type="button" v-on:click="deleteProduct" value="Delete" />*@
+            @*<input type="button" v-on:click="editProduct" value="Edit" />*@
+            <input type="button" v-on:click="deleteProduct(item)" value="Delete" />
         </div>
     </div>
 </script>
