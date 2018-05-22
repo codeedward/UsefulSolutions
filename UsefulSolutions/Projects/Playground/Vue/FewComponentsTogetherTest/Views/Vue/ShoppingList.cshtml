@@ -3,7 +3,7 @@
         <h3>Shopping list</h3>
         <input type="button" v-on:click="addProduct" value="Add product" />
         <div v-for="item in shoppingList">
-            Name: {{item.description}}, Quantity: {{item.quantity}}, Price {{item.price}}
+            <display-product v-bind:product="item"></display-product>
             @*<input type="button" v-on:click="editProduct" value="Edit" />*@
             <input type="button" v-on:click="deleteProduct(item)" value="Delete" />
         </div>

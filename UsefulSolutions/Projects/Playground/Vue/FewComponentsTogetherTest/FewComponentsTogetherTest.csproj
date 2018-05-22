@@ -177,6 +177,8 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\vue.js" />
     <Content Include="Scripts\vue.min.js" />
+    <Content Include="Scripts\Vue\displayProduct.js" />
+    <Content Include="Scripts\Vue\editProduct.js" />
     <Content Include="Scripts\Vue\login.js" />
     <Content Include="Scripts\Vue\main.js" />
     <Content Include="Scripts\Vue\shoppingList.js" />
@@ -200,6 +202,8 @@
     <Content Include="Views\Vue\shoppingList.cshtml" />
     <Content Include="Views\Vue\main.cshtml" />
     <Content Include="Views\Vue\login.cshtml" />
+    <Content Include="Views\Vue\editProduct.cshtml" />
+    <Content Include="Views\Vue\displayProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
