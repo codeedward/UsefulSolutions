@@ -40,5 +40,17 @@
         },
         mounted: function () {
             this.getProducts();
+        },
+        computed: {
+            overallPrice: function() {
+                var price = 0;
+                
+                for (var i = 0; i < this.shoppingList.length; i++) {
+                    var product = this.shoppingList[i];
+                    price += (product.quantity * product.price);
+                }
+
+                return price;
+            }
         }
     })
