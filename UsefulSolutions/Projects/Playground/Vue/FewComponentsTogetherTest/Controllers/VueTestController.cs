@@ -39,16 +39,6 @@ namespace FewComponentsTogetherTest.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        //[HttpPost]
-        //public ActionResult AddProduct(Product product)
-        //{
-        //    product.id = new Random().Next(1000, 1000000);
-        //    product.description += " - " + product.id;
-        //    ProductsList.Add(product);
-
-        //    return Json(true, JsonRequestBehavior.AllowGet);
-        //}
-
         [HttpPost]
         public ActionResult DeleteProduct(int productId)
         {

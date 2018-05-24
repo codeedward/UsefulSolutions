@@ -20,26 +20,29 @@
             },
             editProduct: function (productId) {
                 this.editedProductId = productId;
-                console.log(this.editedProductId);
                 this.viewStep = 2;
             },
             deleteProduct: function (product) {
                 var self = this;
-                console.log(product.id);
                 var request = { productId: product.id };
                 $.post('/VueTest/DeleteProduct', request).done(function (data) {
                     self.getProducts();
                 });
             },
             getProducts: function () {
+                var deferred = $.Deferred();
                 var self = this;
                 $.get('/VueTest/GetProducts').done(function (data) {
                     self.shoppingList = data;
+                    deferred.resolve();
                 });
+                return deferred;
             },
             setInitialState: function () {
-                console.log("we are in setInitialState");
-                this.viewStep = 1;
+                var self = this;
+                this.getProducts().then(function() {
+                    self.viewStep = 1;
+                });
             }
         },
         mounted: function () {
