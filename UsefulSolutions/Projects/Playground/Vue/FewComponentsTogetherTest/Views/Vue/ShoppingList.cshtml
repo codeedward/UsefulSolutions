@@ -1,14 +1,19 @@
 ﻿<script type="text/x-template" id="shopping-list-componennt">
     <div>
-        <h3>Shopping list</h3>
-        <input type="button" v-on:click="addProduct" value="Add product" />
-        <div v-for="item in shoppingList">
-            <display-product v-bind:product="item"></display-product>
-            @*<input type="button" v-on:click="editProduct" value="Edit" />*@
-            <input type="button" v-on:click="deleteProduct(item)" value="Delete" />
-        </div>
-        <div>
-            Total: {{overallPrice}}
-        </div>
+        <template v-if="viewStep == 1">
+            <h3>Shopping list</h3>
+            <input type="button" v-on:click="addProduct" value="Add product" />
+            <div v-for="item in shoppingList">
+                <display-product v-bind:product="item"></display-product>
+                <input type="button" v-on:click="editProduct(item.id)" value="Edit" />
+                <input type="button" v-on:click="deleteProduct(item)" value="Delete" />
+            </div>
+            <div>
+                Total: {{overallPrice}}
+            </div>
+        </template>
+        <template v-else-if="viewStep == 2">
+            <edit-product v-bind:productId="editedProductId"  v-on:set-initial-state="setInitialState"></edit-product>
+        </template>
     </div>
 </script>
