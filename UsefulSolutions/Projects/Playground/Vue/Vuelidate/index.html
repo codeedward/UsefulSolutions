@@ -1,0 +1,84 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./scripts/vuelidate.min.js"></script>
+<script src="./scripts/validators.min.js"></script>
+
+
+<style>
+    input {
+        border: 1px solid silver;
+        border-radius: 4px;
+        background: white;
+        padding: 5px 10px;
+    }
+
+    .dirty {
+        border-color: #5A5;
+        background: #EFE;
+    }
+
+    .dirty:focus {
+        outline-color: #8E8;
+    }
+
+    .error {
+        border-color: red;
+        background: #FDD;
+    }
+
+    .error:focus {
+        outline-color: #F99;
+    }
+
+</style>
+
+<div id="app">
+    <h3 v-text="message"></h3>
+    {{message}}
+    <div>
+        <input id="tbx1" v-model="$v.page.tbx1.$model" type="text" :class="status($v.page.tbx1)" /> tbx1: {{page.tbx1}}, invalid: {{$v.page.tbx1.$error}}
+        <br>
+        <input id="tbx2" v-model="$v.page.tbx2.$model" type="number" :class="status($v.page.tbx2)" /> tbx2: {{page.tbx2}}, invalid: {{$v.page.tbx2.$error}}
+    </div>
+</div>
+
+
+
+<script>
+    Vue.use(window.vuelidate.default);
+    const { required, minLength, between } = window.validators
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            viewStep: 1,
+            message: 'This is my test site',
+            page: {
+                tbx1: '',
+                tbx2: ''
+            }
+        },
+        validations: {
+            page: {
+                tbx1: {
+                    required,
+                    minLength: minLength(4)
+                },
+                tbx2: {
+                    between: between(20, 30)
+                }
+            }
+        },
+        methods: {
+            status(validation) {
+                return {
+                    error: validation.$error,
+                    dirty: validation.$dirty
+                }
+            }
+        }
+    });
+
+
+</script>
+
+
