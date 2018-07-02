@@ -1,0 +1,74 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
+<!-- unpkg -->
+<script src="https://unpkg.com/vee-validate@latest"></script>
+
+<style>
+    input {
+        border: 1px solid silver;
+        border-radius: 4px;
+        background: white;
+        padding: 5px 10px;
+    }
+
+    .dirty {
+        border-color: #5A5;
+        background: #EFE;
+    }
+
+    .dirty:focus {
+        outline-color: #8E8;
+    }
+
+    .error {
+        border-color: red;
+        background: #FDD;
+    }
+
+    .error:focus {
+        outline-color: #F99;
+    }
+
+</style>
+
+<div id="app">
+    <h3 v-text="message"></h3>
+    {{message}}
+    <div>
+        <input id="tbx1" name="tbx1" v-model="page.tbx1" v-validate="'required|numeric'" type="text" :class="{'error': errors.has('tbx1')}" /> tbx1: {{page.tbx1}}, invalidText: {{errors.first('tbx1')}}, invalid: {{errors.has('tbx1')}}
+        <br>
+        <input id="tbx2" name="tbx2" v-model="page.tbx2" v-validate="'required|numeric'" type="number" :class="{'error': errors.has('tbx2')}" /> tbx2: {{page.tbx2}}, invalidText: {{errors.first('tbx2')}}, invalid: {{errors.has('tbx2')}}
+    </div>
+	<input type="button" value="validate" v-on:click="validateMethod"/>
+</div>
+
+
+
+<script>
+   Vue.use(VeeValidate);
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            viewStep: 1,
+            message: 'This is my test site',
+            page: {
+                tbx1: '',
+                tbx2: ''
+            }
+        },       
+        methods: {
+            <!-- status(validation) { -->
+                <!-- return true; -->
+            <!-- }, -->
+			validateMethod: function(){
+				this.$validator.validateAll();
+			}
+        }
+    });
+setTimeout(function(){
+app.validateMethod();
+},5000);
+
+</script>
+

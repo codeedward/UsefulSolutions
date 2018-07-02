@@ -1,0 +1,140 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
+<!-- unpkg -->
+<script src="https://unpkg.com/vee-validate@latest"></script>
+
+<style>
+    input {
+        border: 1px solid silver;
+        border-radius: 4px;
+        background: white;
+        padding: 5px 10px;
+    }
+
+    .dirty {
+        border-color: #5A5;
+        background: #EFE;
+    }
+
+    .dirty:focus {
+        outline-color: #8E8;
+    }
+
+    .error {
+        border-color: red;
+        background: #FDD;
+    }
+
+    .error:focus {
+        outline-color: #F99;
+    }
+
+</style>
+
+<div id="app">
+    <h3 v-text="message"></h3>
+    {{message}}
+	<div>
+	<input type="button" value="show 1" v-on:click="show(1)" :class="{'error': isFormDirty}"/>
+	<input type="button" value="show 2" v-on:click="show(2)" :class="{'error': page2hasErrors}"/>
+	</div>
+	<br/>
+    <div v-show="viewStep == 1">
+		<div>Step1</div>
+        <input id="tbx1_1" name="tbx1_1" v-model="page1.tbx1" v-validate="'required|numeric'" type="text" :class="{'error': errors.has('tbx1_1')}" /> tbx1: {{page1.tbx1}}, invalidText: {{errors.first('tbx1_1')}}, invalid: {{errors.has('tbx1_1')}}
+        <br>
+        <input id="tbx2_1" name="tbx2_1" v-model="page1.tbx2" v-validate="'required|numeric'" type="number" :class="{'error': errors.has('tbx2_1')}" /> tbx2: {{page1.tbx2}}, invalidText: {{errors.first('tbx2_1')}}, invalid: {{errors.has('tbx2_1')}}
+    </div>
+	  <div v-show="viewStep == 2">
+		<div>Step2</div>
+        <input id="tbx1_2" name="tbx1_2" v-model="page2.tbx1" v-validate="'required|numeric'" type="text" :class="{'error': errors.has('tbx1_2')}" /> tbx1: {{page2.tbx1}}, invalidText: {{errors.first('tbx1_2')}}, invalid: {{errors.has('tbx1_2')}}
+        <br>
+        <input id="tbx2_2" name="tbx2_2" v-model="page2.tbx2" v-validate="'required|numeric'" type="number" :class="{'error': errors.has('tbx2_2')}" /> tbx2: {{page2.tbx2}}, invalidText: {{errors.first('tbx2_2')}}, invalid: {{errors.has('tbx2_2')}}
+    </div>
+	<input type="button" value="validate" v-on:click="validateMethod"/>
+	<button-counter></button-counter>
+</div>
+
+
+
+<script>
+    Vue.use(VeeValidate);
+
+	Vue.component('button-counter', {
+	  data: function () {
+		return {
+		  count: 0,
+		  test: ''
+		}
+	  },
+	  template: '<div><input id="test" name="test" v-model="test" v-validate="\'required\'"></input><button v-on:click="add">You clicked me {{ count }} times.</button></div>',
+	  methods: {
+		add: function(){
+			console.log(this.fields);
+			this.count++
+		}
+	  }
+	  
+	})
+   
+    var app = new Vue({
+        el: '#app',
+        data: {
+            viewStep: 1,
+            message: 'This is my test site',
+            page1: {
+                tbx1: '',
+                tbx2: ''
+            }, 
+			page2: {
+                tbx1: '',
+                tbx2: ''
+            }
+        },       
+		computed: {
+			page2hasErrors: function() { 
+				return this.errors.has('tbx1_2') || this.errors.has('tbx2_2');
+			},
+			isFormDirty: function() {
+			console.log('before test');
+			if(app){
+				var result = !app.fields['tbx1_1'].valid || !app.fields['tbx2_1'].valid; //this.page1.tbx1 == '' || this.page1.tbx2 == '';
+				console.log('test');
+				return result;
+			}
+			
+				<!-- if(model) -->
+				<!-- { -->
+					<!-- return Object.keys(model).some(key => model[key].dirty); -->
+				<!-- } -->
+				<!-- return false; -->
+				<!-- console.log('test try'); -->
+				<!-- if(this) -->
+				<!-- { -->
+				 <!-- console.log('test'); -->
+				 <!-- return Object.keys(this.page1).some(key => this.page1[key].dirty); -->
+				<!-- } -->
+				 
+			
+			}
+		},
+        methods: {
+            <!-- status(validation) { -->
+                <!-- return true; -->
+            <!-- }, -->
+			validateMethod: function(){
+				this.$validator.validateAll();
+				console.log(this.fields);
+			},
+			show: function(step){
+				this.viewStep = step;
+			}
+        }
+    });
+<!-- setTimeout(function(){ -->
+<!-- app.validateMethod(); -->
+<!-- },5000); -->
+
+
+</script>
+
