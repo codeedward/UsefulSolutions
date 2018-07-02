@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FewComponentsTogetherTest",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPack", "Projects\Playground\Vue\WebPack\WebPack.csproj", "{43A65B25-20C9-469D-9B9D-AA60DF51EB0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeePrototype", "Projects\Playground\Vue\Vee\03 proto\VeePrototype\VeePrototype.csproj", "{6A4992F0-4CC1-4CA8-8CC9-C11535321032}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{43A65B25-20C9-469D-9B9D-AA60DF51EB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43A65B25-20C9-469D-9B9D-AA60DF51EB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43A65B25-20C9-469D-9B9D-AA60DF51EB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4992F0-4CC1-4CA8-8CC9-C11535321032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4992F0-4CC1-4CA8-8CC9-C11535321032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4992F0-4CC1-4CA8-8CC9-C11535321032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4992F0-4CC1-4CA8-8CC9-C11535321032}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{42339821-8418-4C0C-8925-8A122841F0F1} = {9CE31318-557B-4255-B37A-DAC01FEC6450}
 		{43112634-E7A7-44EB-9343-90A46C07BF44} = {42339821-8418-4C0C-8925-8A122841F0F1}
 		{43A65B25-20C9-469D-9B9D-AA60DF51EB0E} = {42339821-8418-4C0C-8925-8A122841F0F1}
+		{6A4992F0-4CC1-4CA8-8CC9-C11535321032} = {42339821-8418-4C0C-8925-8A122841F0F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A75F9BF-EABE-43AE-BEB3-35F73289552C}

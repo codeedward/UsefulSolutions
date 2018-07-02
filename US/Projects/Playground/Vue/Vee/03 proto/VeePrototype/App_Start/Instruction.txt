@@ -1,0 +1,16 @@
+Application purpose
+-----------------------
+Play with Vue components and vee validation.
+Crate list of collections with pages add dynamic validation for pages and collection depend on required questions.
+Collection -> Page -> Section -> Question. Question can be different types like text, number, checkbox, list etc.
+-----------------------
+
+
+
+model -> list of collections
+collection -> list of pages
+page -> list of sections, title
+section -> list of questions, title
+question -> required, type, description
+
+
