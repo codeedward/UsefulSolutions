@@ -1,22 +1,21 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Vee prototype";
 }
 
 <h2>Vee prototype</h2>
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 @Scripts.Render("~/bundles/vue")
-@*@RenderPage("~/Views/Vue/login.cshtml")
-@RenderPage("~/Views/Vue/shoppingList.cshtml")
-@RenderPage("~/Views/Vue/displayProduct.cshtml")
-@RenderPage("~/Views/Vue/editProduct.cshtml")*@
+@RenderPage("~/Views/Vee/_collections.cshtml")
+@RenderPage("~/Views/Vee/_formBuilder.cshtml")
+@*@RenderPage("~/Views/Vee/displayProduct.cshtml")
+@RenderPage("~/Views/Vee/editProduct.cshtml")*@
 @RenderPage("~/Views/Vee/_main.cshtml")
 
 
 
-@*<script src="~/Scripts/Vue/login.js"></script>
-<script src="~/Scripts/Vue/shoppingList.js"></script>
-<script src="~/Scripts/Vue/displayProduct.js"></script>
-<script src="~/Scripts/Vue/editProduct.js"></script>*@
+<script src="~/Scripts/Vee/_collections.js"></script>
+<script src="~/Scripts/Vee/_formBuilder.js"></script>
+@*<script src="~/Scripts/Vee/displayProduct.js"></script>
+<script src="~/Scripts/Vee/editProduct.js"></script>*@
 <script src="~/Scripts/Vee/_main.js"></script>
