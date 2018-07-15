@@ -1,0 +1,23 @@
+﻿<script type="text/x-template" id="pages-panel">
+    <div class="">
+        <template v-for="page in Pages">
+            <div>
+                <input type="button" v-model="page.Title" class="pageTile"></input>
+                <div class="pageContent">
+                    SOME CONTENT
+                </div>
+            </div>
+        </template>
+    </div>
+</script>
+
+<style>
+    .pageTile {
+        margin-top: 10px;
+    }
+
+    .pageContent {
+        color: black;
+    }
+</style>
+

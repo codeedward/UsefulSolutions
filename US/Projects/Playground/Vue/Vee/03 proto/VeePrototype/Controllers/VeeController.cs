@@ -21,6 +21,7 @@ namespace VeePrototype.Controllers
                 {
                     new CollectionOfPages()
                     {
+                        Id = 1,
                         Title = "Collection 1",
                         Pages = new List<Page>()
                         {
@@ -52,11 +53,41 @@ namespace VeePrototype.Controllers
                                         }
                                     }
                                 }
+                            },
+                            new Page()
+                            {
+                                Title = "Main information123",
+                                Sections = new List<Section>()
+                                {
+                                    new Section()
+                                    {
+                                        Title = "Personal details123",
+                                        Questions = new List<Question>()
+                                        {
+                                            new Question(_counter++, true, "First name", QuestionType.Text),
+                                            new Question(_counter++, true, "Last name", QuestionType.Text),
+                                            new Question(_counter++, false, "Initials", QuestionType.Text)
+                                        }
+                                    },
+                                    new Section()
+                                    {
+                                        Title = "Extra information123",
+                                        Questions = new List<Question>()
+                                        {
+                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
+                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
+                                            new Question(_counter++, true, "Some question" + _counter, QuestionType.Text),
+                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
+                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
+                                        }
+                                    }
+                                }
                             }
                         }
                     },
                     new CollectionOfPages()
                     {
+                        Id = 2,
                         Title = "Collection 2",
                         Pages = new List<Page>()
                         {
@@ -80,6 +111,7 @@ namespace VeePrototype.Controllers
                     },
                     new CollectionOfPages()
                     {
+                        Id = 3,
                         Title = "Collection 3",
                         Pages = new List<Page>()
                         {

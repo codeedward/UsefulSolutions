@@ -1,13 +1,21 @@
 ﻿<script type="text/x-template" id="collections">
     <div class="collections">
         <template v-for="collection in Collections">
-            <input type="button" v-model="collection.Title"></input>
-            @*<input v-model="login" v-bind:placeholder="loginPlaceholder" />
-        <div v-for="item in shoppingList">
-            <display-product v-bind:product="item"></display-product>
-            <input type="button" v-on:click="editProduct(item.id)" value="Edit" />
-            <input type="button" v-on:click="deleteProduct(item)" value="Delete" />
-        </div>*@
+            <input type="button" v-on:click="selectCollection(collection.Id)" v-model="collection.Title" class="collectionTitle"></input>
+            <pages-panel v-if="collectionSelected == collection.Id" v-bind:Pages="collection.Pages" class="pages"></pages-panel>
         </template>
     </div>
 </script>
+<style>
+    .pages {
+        float: left;
+        margin-top: 50px;
+        margin-right: 10px;
+        margin-bottom: 300px;
+    }
+    .collectionTitle {
+        color: green;
+        width: 100%;
+    }
+    
+</style>
