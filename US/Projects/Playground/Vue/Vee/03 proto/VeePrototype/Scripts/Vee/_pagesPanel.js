@@ -1,7 +1,7 @@
 ﻿Vue.component('pages-panel',
     {
         template: '#pages-panel',
-        props: ['Pages'],
+        props: ['Collection'],
         data: function () {
             return {
             }

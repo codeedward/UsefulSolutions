@@ -1,15 +1,22 @@
 ﻿Vue.component('collections',
     {
         template: '#collections',
-        props: ['Collections'],
+        props: ['Collections','parent'],
         data: function () {
             return {
-               collectionSelected: 1
             }
         },
         methods: {
-            selectCollection: function(collectionId) {
-                this.collectionSelected = collectionId;
+            selectCollection: function(collection) {
+                this.parent.selectCollection(collection);
             }
+        },
+        mounted: function () {
+            var self = this;
+            setTimeout(function() {
+                    self.selectCollection(self.Collections[0]);
+                },
+                2000);
+
         }
     });

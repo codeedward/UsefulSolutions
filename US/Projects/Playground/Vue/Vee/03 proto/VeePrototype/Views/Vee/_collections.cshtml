@@ -1,18 +1,12 @@
 ﻿<script type="text/x-template" id="collections">
     <div class="collections">
         <template v-for="collection in Collections">
-            <input type="button" v-on:click="selectCollection(collection.Id)" v-model="collection.Title" class="collectionTitle"></input>
-            <pages-panel v-if="collectionSelected == collection.Id" v-bind:Pages="collection.Pages" class="pages"></pages-panel>
+            <input type="button" v-on:click="selectCollection(collection)" v-model="collection.Title" class="collectionTitle"></input>
         </template>
     </div>
 </script>
 <style>
-    .pages {
-        float: left;
-        margin-top: 50px;
-        margin-right: 10px;
-        margin-bottom: 300px;
-    }
+
     .collectionTitle {
         color: green;
         width: 100%;
