@@ -19,6 +19,22 @@
                     }
                 }
                 return result;
+            },
+            selectedPage: function () {
+                var result = {}
+                var collection = this.selectedCollection;
+                if (collection) {
+                    var pages = collection.Pages;
+                    if (pages) {
+                        for (var i = 0; i < pages.length; i++) {
+                            if (pages[i].IsSelected) {
+                                result = pages[i];
+                                break;
+                            }
+                        }
+                    }
+                }
+                return result;
             }
         }
     });

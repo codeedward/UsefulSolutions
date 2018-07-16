@@ -232,6 +232,7 @@
     <Content Include="Scripts\Vee\_collections.js" />
     <Content Include="Scripts\Vee\_formBuilder.js" />
     <Content Include="Scripts\Vee\_main.js" />
+    <Content Include="Scripts\Vee\_page.js" />
     <Content Include="Scripts\Vee\_pagesPanel.js" />
     <Content Include="Scripts\vue.js" />
     <Content Include="Scripts\vue.min.js" />
@@ -254,6 +255,7 @@
     <Content Include="Views\Vee\_formBuilder.cshtml" />
     <Content Include="Views\Vee\_collections.cshtml" />
     <Content Include="Views\Vee\_pagesPanel.cshtml" />
+    <Content Include="Views\Vee\_page.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

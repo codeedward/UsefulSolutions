@@ -2,7 +2,7 @@
     <div>
         <template v-for="page in Collection.Pages">
             <div>
-                <input type="button" v-model="page.Title" class="pageTile"></input>
+                <input type="button" v-on:click="selectPage(page)" v-model="page.Title" class="pageTile"></input>
             </div>
         </template>
     </div>

@@ -28,6 +28,7 @@ namespace VeePrototype.Controllers
                         {
                             new Page()
                             {
+                                IsSelected = true,
                                 Title = "Main information",
                                 Sections = new List<Section>()
                                 {
@@ -94,6 +95,7 @@ namespace VeePrototype.Controllers
                         {
                             new Page()
                             {
+                                IsSelected = true,
                                 Title = "Extra information 1",
                                 Sections = new List<Section>()
                                 {
@@ -118,6 +120,7 @@ namespace VeePrototype.Controllers
                         {
                            new Page()
                            {
+                               IsSelected = true,
                                Title = "Extra information 2",
                                Sections = new List<Section>()
                                {
