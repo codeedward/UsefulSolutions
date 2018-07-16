@@ -4,26 +4,21 @@
         props: ['model'],
         data: function () {
             return {
-                selectedCollection: null
-            }
-        },
-        methods: {
-            selectCollection: function (collection) {
-                this.selectedCollection = collection;
             }
         },
         computed: {
-            //selectedCollection2: function() {
-            //    if (this.selectedCollection) {
-            //        console.log("test3");
-            //        return this.selectedCollection;
-            //    }
-            //    return {};
-            //}
-        },
-        updated: function () {
-            //if (this.model.Collections) {
-            //    return this.selectedCollection = this.model.Collections[0];
-            //}
+            selectedCollection: function () {
+                var result = {}
+                var collections = this.model.Collections;
+                if (collections) {
+                    for (var i = 0; i < collections.length; i++) {
+                        if (collections[i].IsSelected) {
+                            result = collections[i];
+                            break;
+                        }
+                    }
+                }
+                return result;
+            }
         }
     });

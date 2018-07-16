@@ -21,6 +21,7 @@ namespace VeePrototype.Controllers
                 {
                     new CollectionOfPages()
                     {
+                        IsSelected = true,
                         Id = 1,
                         Title = "Collection 1",
                         Pages = new List<Page>()
