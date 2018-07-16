@@ -6,6 +6,7 @@
         public bool Required { get; set; }
         public string Description { get; set; }
         public QuestionType Type { get; set; }
+        public string Value { get; set; }
 
         public Question(int id, bool required, string description, QuestionType type)
         {

@@ -51,7 +51,7 @@ namespace VeePrototype.Controllers
                                             new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
                                             new Question(_counter++, true, "Some question" + _counter, QuestionType.Text),
                                             new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
-                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
+                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text)
                                         }
                                     }
                                 }
@@ -79,8 +79,7 @@ namespace VeePrototype.Controllers
                                             new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
                                             new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
                                             new Question(_counter++, true, "Some question" + _counter, QuestionType.Text),
-                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
-                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text),
+                                            new Question(_counter++, false, "Some question" + _counter, QuestionType.Text)
                                         }
                                     }
                                 }
@@ -126,6 +125,7 @@ namespace VeePrototype.Controllers
                                {
                                    new Section()
                                    {
+                                       Title = "Section last",
                                        Questions = new List<Question>()
                                        {
                                            new Question(_counter++, false, "Some question", QuestionType.Text)
