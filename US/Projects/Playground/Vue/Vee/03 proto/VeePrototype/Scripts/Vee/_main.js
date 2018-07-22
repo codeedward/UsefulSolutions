@@ -1,4 +1,6 @@
-﻿var app = new Vue({
+﻿var bus = new Vue({});
+
+var app = new Vue({
     el: '#app',
     data: {
         message: 'This is prototype of vee in complicated collection - pages structure',
@@ -23,7 +25,8 @@
             });
         }
     },
-    mounted: function() {
+    mounted: function () {
+        Vue.use(VeeValidate);
         this.getData();
     }
 });

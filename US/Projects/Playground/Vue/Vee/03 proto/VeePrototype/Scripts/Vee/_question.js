@@ -5,5 +5,11 @@
         data: function () {
             return {
             }
+        },
+        created: function () {
+            var vm = this;
+            bus.$on('validate_all', function () {
+                vm.$validator.validateAll();
+            });
         }
     });

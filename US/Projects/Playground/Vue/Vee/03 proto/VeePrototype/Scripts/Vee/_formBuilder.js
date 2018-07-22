@@ -18,6 +18,8 @@
                         }
                     }
                 }
+                
+                setTimeout(function () { console.log("selectedCollection"); bus.$emit('validate_all'); }, 1000);
                 return result;
             },
             selectedPage: function () {
@@ -34,6 +36,8 @@
                         }
                     }
                 }
+                
+                setTimeout(function () { console.log("selectedPage"); bus.$emit('validate_all'); }, 1000);
                 return result;
             }
         }

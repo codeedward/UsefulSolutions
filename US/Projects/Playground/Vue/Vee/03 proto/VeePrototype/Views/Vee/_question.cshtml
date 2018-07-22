@@ -1,13 +1,39 @@
 ﻿<script type="text/x-template" id="question">
     <div class="questionStyle">
         {{Question.Description}}
-        <input v-model="Question.Value"></input>
+        <input v-if="Question.Required" v-bind:id="'input_'+ Question.Id" v-bind:name="'input_'+ Question.Id" v-model="Question.Value" v-validate="'required'" :class="{'error': errors.has('input_'+ Question.Id)}"></input>
+        <input v-else v-bind:id="'input_'+ Question.Id" v-bind:name="'input_'+ Question.Id" v-model="Question.Value"></input>
     </div>
 </script>
 
 <style>
     .questionStyle {
         color: purple;
+    }
+
+    input {
+        border: 1px solid silver;
+        border-radius: 4px;
+        background: white;
+        padding: 5px 10px;
+    }
+
+    .dirty {
+        border-color: #5A5;
+        background: #EFE;
+    }
+
+    .dirty:focus {
+        outline-color: #8E8;
+    }
+
+    .error {
+        border-color: red;
+        background: #FDD;
+    }
+
+    .error:focus {
+        outline-color: #F99;
     }
 </style>
 
