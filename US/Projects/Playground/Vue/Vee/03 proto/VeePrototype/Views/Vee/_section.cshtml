@@ -1,0 +1,18 @@
+﻿<script type="text/x-template" id="section">
+    <div>
+        <h4>{{Section.Title}}</h4>
+        <hr />
+        <div>
+            <div v-for="question in Section.Questions" class="question">
+                <question v-bind:Question="question"></question>
+            </div>
+        </div>
+    </div>
+</script>
+
+<style>
+    .question {
+        margin-top: 5px;
+    }
+</style>
+

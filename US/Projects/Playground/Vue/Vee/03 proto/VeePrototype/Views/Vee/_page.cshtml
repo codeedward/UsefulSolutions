@@ -4,13 +4,14 @@
             <h3>{{Page.Title}}</h3>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             <div v-for="section in Page.Sections" class="sectionPanel">
-                <h4>{{section.Title}}</h4>
+                @*<h4>{{section.Title}}</h4>
                 <hr />
                 <div>
                     <div v-for="question in section.Questions" class="question">
                         <div>{{question.Description}} <input v-model="question.Value"></input></div>
                     </div>
-                </div>
+                </div>*@
+                <page-section v-bind:Section="section"></page-section>
             </div>
         </div>
     </div>
@@ -19,9 +20,5 @@
 <style>
     .sectionPanel {
         margin-top: 50px;
-    }
-
-    .question {
-        margin-top: 5px;
     }
 </style>
